@@ -28,11 +28,11 @@ def saudacao():
     hora_atual = datetime.now().strftime("%H:%M")
 
     if hora_primaria < 12:
-        print("Olá {}, são {} hs. Bom dia!".format(nome, hora_atual))
+        print("Bom dia, {}. Hora certa: {} hs.".format(nome, hora_atual))
     elif hora_primaria >= 12 or hora_primaria < 18:
-        print("Olá {}, são {} hs. Boa tarde".format(nome, hora_atual))
+        print("Boa tarde, {}. Hora certa: {} hs.".format(nome, hora_atual))
     elif hora_primaria >= 18 or hora_primaria < 24:
-        print("Olá {}, são {} hs. Boa noite!".format(nome, hora_atual))
+        print("Boa noite, {}. Hora certa: {} hs".format(nome, hora_atual))
 
 saudacao()
 
