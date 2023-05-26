@@ -29,6 +29,7 @@ def jokenpo():
             print('Empatou!')
         elif jogador == 2:                  # TESOURA
             print('Jogador Venceu!')
+            
     elif computador == 2:                   # COMPUTADOR JOGOU TESOURA
         if jogador == 0:                    # PEDRA
             print('Jogador Venceu!')
@@ -42,11 +43,11 @@ def jokenpo():
     again()
 
 def again():
-    executar_novo = input("Quer executar novamente: [S] Sim ou [N] Não: \n")
-    if executar_novo.upper() == "S":
+    executar_novo = input("Quer jogar novamente: [S] Sim ou [N] Não: \n")
+    if executar_novo.upper().strip()[0] == "S" or executar_novo.upper() == 'SIM':
         jokenpo()   
         # nome da função principal
-    elif executar_novo.upper() == "N":
+    elif executar_novo.upper().strip()[0] == "N" or executar_novo.upper() == 'NÃO':
         print("Até mais tarde!!!")
     else:
         again()
