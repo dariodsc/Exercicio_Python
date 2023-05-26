@@ -1,14 +1,17 @@
 #1 # função de repetição do programa ou encerramento
 
 def again():
-    executar_novo = input("Quer executar novamente: [S] Sim ou [N] Não: \n")
-    if executar_novo.upper() == "S":
-        calculadora()   
-        # nome da função principal
-    elif executar_novo.upper() == "N":
-        print("Até mais tarde!!!")
+    import os   # import para a usar o cls / Limpar a tela
+    calcular_denovo = input("Quer calcular novamente: [S] Sim ou [N] Não: \n")
+    if calcular_denovo.upper().strip()[0] == "S":
+        os.system('cls')    # Usado no import
+        calculadora()
+    elif calcular_denovo.upper().strip()[0] == "N":
+        print("Encerrando...")
     else:
+        print('Valor invalido!')
         again()
+    # fim da função again
         
 #2 # Importando biblioteca date para trabalhos com datas
 
