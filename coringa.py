@@ -46,4 +46,15 @@ novo_texto = texto.replace(" ", "")
 
 print(f'O Texto = {texto}, possui {len(novo_texto)} caracteres')
 
+# 5 # Checando se variavel é um numeral
+
+# Verificação do primeiro número
+    while True:
+        valor_1 = input("Primeiro Valor: ")
+        if valor_1.isdigit():
+            valor_1 = int(valor_1)
+            break
+        else:
+            print("Valor inválido. Digite um número inteiro válido.")
+
 
