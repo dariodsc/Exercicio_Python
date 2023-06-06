@@ -5,13 +5,22 @@ def again():
     calcular_denovo = input("Quer calcular novamente: [S] Sim ou [N] Não: \n")
     if calcular_denovo.upper().strip()[0] == "S":
         os.system('cls')    # Usado no import
-        calculadora()
+        calculadora()   # mudar para sua função principal
     elif calcular_denovo.upper().strip()[0] == "N":
         print("Encerrando...")
     else:
         print('Valor invalido!')
         again()
     # fim da função again
+        
+ def again(): # versão simplificada do chatgpt
+    executar_novo = input("Quer jogar novamente? [S] Sim ou [N] Não: \n")
+    if executar_novo.upper().strip() in ['S', 'SIM']:
+        jokenpo()   # mudar para sua função principal
+    elif executar_novo.upper().strip() in ['N', 'NÃO']:
+        print("Até mais tarde!!!")
+    else:
+        again()
         
 #2 # Importando biblioteca date para trabalhos com datas
 
@@ -51,7 +60,7 @@ print(f'O Texto = {texto}, possui {len(novo_texto)} caracteres')
 
 # 5 # Checando se variavel é um numeral
 
-# Verificação do primeiro número
+# Verificação a variavel é um INT
     while True:
         valor_1 = input("Primeiro Valor: ")
         if valor_1.isdigit():
