@@ -1,5 +1,7 @@
 #1 # função de repetição do programa ou encerramento
 
+# Primeira Versão
+
 def again():
     import os   # import para a usar o cls / Limpar a tela
     calcular_denovo = input("Quer calcular novamente: [S] Sim ou [N] Não: \n")
@@ -13,7 +15,9 @@ def again():
         again()
     # fim da função again
         
- def again(): # versão simplificada do chatgpt
+# Segunda Versão - simplificada do chatgpt 
+
+ def again(): 
     executar_novo = input("Quer jogar novamente? [S] Sim ou [N] Não: \n")
     if executar_novo.upper().strip() in ['S', 'SIM']:
         jokenpo()   # mudar para sua função principal
@@ -31,6 +35,8 @@ print(ano_atual)
 
 #3 # Saudação de acordo com o horário do dia (bom dia, boa tarde, boa noite)
 
+# Primeira Versão - Saudação com nome
+
 def saudacao():
 
     from datetime import datetime
@@ -45,6 +51,23 @@ def saudacao():
         print("Boa tarde, {}. Hora certa: {} hs.".format(nome, hora_atual))
     elif hora_primaria >= 18 or hora_primaria < 24:
         print("Boa noite, {}. Hora certa: {} hs".format(nome, hora_atual))
+
+saudacao()
+
+# Segunda Versão - Somente Saudação
+
+def saudacao():
+
+    from datetime import datetime
+   
+    hora_primaria = int(datetime.now().strftime("%H"))
+
+    if hora_primaria < 12:
+        print('Bom dia')
+    elif hora_primaria >= 12 or hora_primaria < 18:
+        print('Boa tarde')
+    elif hora_primaria >= 18 or hora_primaria < 24:
+        print('Boa noite')
 
 saudacao()
 
